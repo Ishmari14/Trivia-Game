@@ -1,67 +1,68 @@
 ///click event : start///
+$(document).ready(function () {
+
+    $("#start").on('click', items.start);
+    $(document).on('click', '.options', trivia.guesses);
 
 
-$(document).on('click', '#start', function (e) {
-    start();
-});
 
-$(document).on('click', '#done', function (e) {
-    done();
-});
 
-var contain = $('#area');
+
+
+
+
+
+    var items = {
+
+        //variables for the starting functions//
+        correct = 0,
+        wrong = 0,
+        current = 0,
+        counter = 30,
+        counterID = '',
+        counterON = false,
+
+        ///start function///
+
+        start: function () {
+
+            items.correct = 0;
+            items.wrong = 0;
+            items.current = 0;
+
+            //clear///
+            clearInterval(items.counterID);
+
+
+
+        }
 
 //questions///
+        question: {
+            q1: "Who is the Avatar of Nyx?",
+            q2: "Who is the ruler of the Velvet Room?",
+            q3: "Where can Mementos be found?",
+            q4: "What does S.E.E.S stand for?",
+            q5: "Who is the serial killer in Persona 4?",
+            q6: "How do you access the Metaverse in Persona 5?",
+            q7: "What causes the strange occurences in Persona 2?",
+            q8: "What is the ultimate personafication of death in Persona 3?",
+            q9: "What is the date for the final battle in Persona 5?",
+            q10: "What tarot card is repreentative of the main character in Persona 2: Innocent Sin?",
 
-var questions = [{
-    qUEStions: "Who is the Avatar of Nyx?",
-    choices: ['Ryoji', 'Minato', 'Yukari', 'Ken'],
-    correctANswer: "Ryoji"
-},
+        },
 
-{
-    qUEStions: "Who is the ruler of the Velvet Room?",
-    choices: ['Philemon', 'Nyarleothep', 'Igor', 'Nyx'],
-    correctANswer: "Igor"
+        choices: {
+            q1: ['Ryoji', 'Minato', 'Yukari', 'Ken'],
+            q2: ['Philemon', 'Nyarleothep', 'Igor', 'Nyx'],
+            q3: ['Shibuya Station', 'Nagoya Station', 'Inaba', 'Xibailba'],
+        },
 
-},
-
-{
-    qUEStions: "Where can Mementos be found?",
-    choices: ['Shibuya Station', 'Nagoya Station', 'Inaba', 'Xibailba'],
-    correctANswer: "Shibuya Station"
+        answer: {
+            q1: "Ryoji",
+            q2: "Igor",
+            q3: "Shibuya Station",
+        },
 
 
-
-
-}];
-
-///variablesfor counter//
-
-var correct = 0;
-var incorrect = 0;
-var counter = 30;
-
-//start counter///
-
-function start() {
-    timer = setInterval(countingdown(),
-        1000);
-
-    $('#area').prepend('<h2>Remaining Time: <span id="counter-number">30</span> Seconds</h2>');
-    $('#start').remove();
-}
-
-for (var i = 0; i < questions.length; i++) {
-    contain.append('<h2>' + questions[i].qUEStions + '</h2>');
-
-    for (var j = 0; j < questions[i].correctANswer.length; j++) {
-        if ($(this).val() == questions[i].correctANswer) {
-            correct++;
-        }
-
-        else {
-            incorrect++;
-        }
     }
-}
