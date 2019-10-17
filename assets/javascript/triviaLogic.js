@@ -35,13 +35,14 @@ var items = {
         $('#start').hide();
         $('#timeleft').show();
 
+
         // next question//
         items.nextQ();
 
 
 
     },
-
+    ///set timer///
     nextQ: function () {
 
         items.counter = 20;
@@ -58,7 +59,9 @@ var items = {
             }
         }
     },
-    ///set timer///
+
+
+
 
     //questions///
     question: {
@@ -79,16 +82,19 @@ var items = {
         q1: ['Ryoji', 'Minato', 'Yukari', 'Ken'],
         q2: ['Philemon', 'Nyarleothep', 'Igor', 'Nyx'],
         q3: ['Shibuya Station', 'Nagoya Station', 'Inaba', 'Xibailba'],
+        q4: ['Specialized Extracurricular Execution Squad', 'Secret Extra Extra Squad', 'Silver Extraterrestial Enomally Society'],
     },
 
     answer: {
         q1: "Ryoji",
         q2: "Igor",
         q3: "Shibuya Station",
+        q4: "Specialized Extracurricular Execution Squad",
     },
 
 
 },
+
 
 
 
