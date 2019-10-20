@@ -100,3 +100,7 @@ h3{
     box-shadow: none;
     transform: none;
 }
+
+.buttons {
+    margin-top: 30px;
+}
