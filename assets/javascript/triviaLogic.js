@@ -10,7 +10,6 @@ const choiceA = document.getElementById("A");
 const choiceB = document.getElementById("B");
 const choiceC = document.getElementById("C");
 const choiceD = document.getElementById("D");
-const progress = document.getElementById("progress");
 const scoreContainer = ("scoreContainer");
 
 ///questions and answers array///
@@ -81,14 +80,16 @@ function renderquestions() {
 
 const timequestion = 30; //30 seconds
 const gaugewth = 200;
-var count = 0;
+var count = 30;
 const gaugeProgress = gaugewth / timequestion;
+var CountDown;
+var score = 0;
 
 function counterrnder() {
     if (count <= timequestion) {
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeProgress + "px";
-        count++;
+        count--;
     }
 
     else {
@@ -97,11 +98,11 @@ function counterrnder() {
 
         if (runningquestion < lastquestionind) {
             runningquestion++;
-            questionrnder();
+            renderquestions();
         }
 
     }
-}
+};
 
 ///start game///
 
@@ -109,7 +110,7 @@ start.onclick = function startGame() {
     start.style.display = "none";
     counterrnder();
     CountDown = setInterval(counterrnder, 1000);
-    questionrnder();
+    renderquestions();
     trivia.style.display = "block";
     console.log("start")
 
@@ -119,8 +120,9 @@ start.onclick = function startGame() {
 
 function checkAnswer(answer) {
     if (questions[runningquestion].correct == answer) {
-        score++
+        score++;
         correctAnswer();
+        console.log("something wrong");
 
     }
     else {
@@ -129,7 +131,7 @@ function checkAnswer(answer) {
     if (runningquestion < lastquestionind) {
         count = 0;
         runningquestion++;
-        questionrnder();
+        renderquestions();
     }
     else {
         clearInterval(CountDown);
