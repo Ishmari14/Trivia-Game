@@ -27,7 +27,7 @@ var questions = [
     },
 
     {
-        question: "",
+        question: "Who is the ruler of the Velvet Room?",
         imgSrc: "",
         choiceA: "",
         choiceB: "",
@@ -38,7 +38,7 @@ var questions = [
     },
 
     {
-        question: "",
+        question: "Where can Mementos be found?",
         imgSrc: "",
         choiceA: "",
         choiceB: "",
@@ -49,7 +49,7 @@ var questions = [
     },
 
     {
-        question: "",
+        question: "What does S.E.E.S stand for?",
         imgSrc: "",
         choiceA: "",
         choiceB: "",
@@ -121,12 +121,12 @@ start.onclick = function startGame() {
 function checkAnswer(answer) {
     if (questions[runningquestion].correct == answer) {
         score++;
-        correctAnswer();
+        ///correctAnswer();///
         console.log("something wrong");
 
     }
     else {
-        answerwrong();
+        //answerwrong();//
     }
     if (runningquestion < lastquestionind) {
         count = 0;
