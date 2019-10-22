@@ -74,6 +74,7 @@ function renderquestions() {
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
+    CountDown = setInterval(counterrnder, 1000);
 }
 
 ///render counter///
@@ -88,7 +89,7 @@ var score = 0;
 function counterrnder() {
     if (count <= timequestion) {
         counter.innerHTML = count;
-        timeGauge.style.width = count * gaugeProgress + "px";
+        //timeGauge.style.width = count * gaugeProgress + "px";//
         count--;
     }
 
@@ -109,7 +110,6 @@ function counterrnder() {
 start.onclick = function startGame() {
     start.style.display = "none";
     counterrnder();
-    CountDown = setInterval(counterrnder, 1000);
     renderquestions();
     trivia.style.display = "block";
     console.log("start")
@@ -121,22 +121,32 @@ start.onclick = function startGame() {
 function checkAnswer(answer) {
     if (questions[runningquestion].correct == answer) {
         score++;
-        ///correctAnswer();///
         console.log("something wrong");
+        whatever();
 
-    }
-    else {
-        //answerwrong();//
+
+
+
     }
     if (runningquestion < lastquestionind) {
         count = 0;
         runningquestion++;
+        whatever();
         renderquestions();
+
+
     }
     else {
-        clearInterval(CountDown);
+        whatever();
         scorernder();
     }
+}
+
+function whatever() {
+
+    clearInterval(CountDown);
+    count = 30;
+
 }
 
 ///render score///
@@ -153,6 +163,7 @@ function scorernder() {
     scoreContainer.innerHTML = "<img src=" + img + "><p>" + scoreper + "%</p>";
 
 }
+
 
 
 
