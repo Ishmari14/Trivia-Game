@@ -29,33 +29,55 @@ var questions = [
     {
         question: "Who is the ruler of the Velvet Room?",
         imgSrc: "",
-        choiceA: "",
-        choiceB: "",
-        choiceC: "",
-        choiceD: "",
-        correct: ""
+        choiceA: "Philemon",
+        choiceB: "Nyarleothep",
+        choiceC: "Igor",
+        choiceD: "Nyx",
+        correct: "C"
 
     },
 
     {
         question: "Where can Mementos be found?",
         imgSrc: "",
-        choiceA: "",
-        choiceB: "",
-        choiceC: "",
-        choiceD: "",
-        correct: ""
+        choiceA: "Shibuya Station",
+        choiceB: "Nagoya Station",
+        choiceC: "Inaba",
+        choiceD: "Xibalba",
+        correct: "A"
 
     },
 
     {
         question: "What does S.E.E.S stand for?",
-        imgSrc: "",
-        choiceA: "",
+        imgSrc: "Special Extra Excution Squad",
+        choiceA: "Sacred Execution Excurstion Seed",
         choiceB: "",
-        choiceC: "",
-        choiceD: "",
-        correct: ""
+        choiceC: "Silver Extraction Edition Section",
+        choiceD: "Specialized Extracurricular Execution Squad",
+        correct: "D"
+
+    },
+
+    {
+        question: "What is the date for the final battle in Persona 5?",
+        imgSrc: "",
+        choiceA: "New Years Day",
+        choiceB: "Halloween",
+        choiceC: "Christmas Eve",
+        choiceD: "Girls Day",
+        correct: "C"
+
+    },
+
+    {
+        question: "What tarot card is repreentative of the main character in Persona 2: Innocent Sin?",
+        imgSrc: "",
+        choiceA: "Moon",
+        choiceB: "Death",
+        choiceC: "Fool",
+        choiceD: "Sun",
+        correct: "D"
 
     },
 
