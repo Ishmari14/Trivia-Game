@@ -17,7 +17,7 @@ const scoreContainer = ("scoreContainer");
 var questions = [
     {
         question: "Who is the Avatar of Nyx",
-        imgSrc: "",
+        imgSrc: "assets/images/dark hour.jpg",
         choiceA: "Ryoji",
         choiceB: "Yukari",
         choiceC: "Minato",
@@ -28,7 +28,7 @@ var questions = [
 
     {
         question: "Who is the ruler of the Velvet Room?",
-        imgSrc: "",
+        imgSrc: "assets/images/velvet room.jpg",
         choiceA: "Philemon",
         choiceB: "Nyarleothep",
         choiceC: "Igor",
@@ -39,7 +39,7 @@ var questions = [
 
     {
         question: "Where can Mementos be found?",
-        imgSrc: "",
+        imgSrc: "assets/images/Mementos_Dungeon_Art_P5.png",
         choiceA: "Shibuya Station",
         choiceB: "Nagoya Station",
         choiceC: "Inaba",
@@ -50,9 +50,9 @@ var questions = [
 
     {
         question: "What does S.E.E.S stand for?",
-        imgSrc: "Special Extra Excution Squad",
+        imgSrc: "assets/images/SEES_Badge.jpg",
         choiceA: "Sacred Execution Excurstion Seed",
-        choiceB: "",
+        choiceB: "Special Extra Excution Squad",
         choiceC: "Silver Extraction Edition Section",
         choiceD: "Specialized Extracurricular Execution Squad",
         correct: "D"
@@ -61,7 +61,7 @@ var questions = [
 
     {
         question: "What is the date for the final battle in Persona 5?",
-        imgSrc: "",
+        imgSrc: "assets/images/satanael.jpg",
         choiceA: "New Years Day",
         choiceB: "Halloween",
         choiceC: "Christmas Eve",
@@ -72,7 +72,7 @@ var questions = [
 
     {
         question: "What tarot card is repreentative of the main character in Persona 2: Innocent Sin?",
-        imgSrc: "",
+        imgSrc: "assets/images/Tatsuya.png",
         choiceA: "Moon",
         choiceB: "Death",
         choiceC: "Fool",
@@ -176,9 +176,9 @@ function whatever() {
 function scorernder() {
     scoreContainer.style.display = "block";
     var scoreper = Math.round(100 * score / questions.length);
-    var img = (scoreper >= 90) ? "" :
-        (scoreper >= 70) ? "" :
-            (scoreper >= 50) ? "" :
+    var img = (scoreper >= 90) ? "assets/images/Mona Excited Face.png" :
+        (scoreper >= 70) ? "assets/images/Mona Standard.png" :
+            (scoreper >= 50) ? "assets/images/Mona Standard.png" :
                 (scoreper >= 30) ? "" :
                     (scoreper >= 10) ? "" : "";
 
